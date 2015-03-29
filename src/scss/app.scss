@@ -3,13 +3,13 @@
 		width: 800px;
 		margin: 0 auto;
 	}
-
+	
 	.ui.visible.left.sidebar ~ .fixed,
 	.ui.visible.left.sidebar ~ .pusher {
-		-webkit-transform: translate3d(260px, 0, 0);;
-		-ms-transform: translate3d(260px, 0, 0);;
-		-o-transform: translate3d(260px, 0, 0);;
-		transform: translate3d(260px, 0, 0);;
+		-webkit-transform: translate3d(260px, 0, 0);
+		-ms-transform: translate3d(260px, 0, 0);
+		-o-transform: translate3d(260px, 0, 0);
+		transform: translate3d(260px, 0, 0);
 	}
 
 	.fixed { position: fixed; }
@@ -38,9 +38,9 @@
 
 		.full.height { flex: 1; }
 	}
+
 	#header { 
 		min-height: 200px; 
 		padding-top: 40px;
 	}
-	// #main { min-height: 500px; }
 }

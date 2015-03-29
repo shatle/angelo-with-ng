@@ -39,7 +39,7 @@ config =
 
 # compile scss
 gulp.task 'style', ->
-  sass(config.style.scss, { style: 'expanded' })
+  sass(config.style.scss, { style: 'expanded', sourcemap: false })
     .pipe(gulpif(argv.production, cssmin()))
     .pipe(gulp.dest(config.style.dest))
     .pipe connect.reload()
@@ -94,7 +94,7 @@ gulp.task 'watch', ()->
 gulp.task 'server', ->
   connect.server({
     root: ['public'],
-    port: '8888',
+    port: '4567',
     livereload: true
   });
 
