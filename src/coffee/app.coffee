@@ -55,9 +55,10 @@ define ['angular',
 
         window.__aws = new AWS('127.0.0.1:4567/ws')
 
-        __aws.res 'new', (d){
+        console.log  "__aws, new,,,,,"
+        __aws.res 'new', (d)->
           console.log 'res,,,,,', d 
-        }
+
         __aws.req 'new', {foo: 'bar'}
     ]
 

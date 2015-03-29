@@ -23,7 +23,14 @@ define(['angular', 'angular-couch-potato', 'angular-ui-router', 'aws'], function
       app.lazy = $couchPotato;
       $rootScope.$state = $state;
       $rootScope.$stateParams = $stateParams;
-      return window.__aws = new AWS('127.0.0.1:4567/ws');
+      window.__aws = new AWS('127.0.0.1:4567/ws');
+      console.log("__aws, new,,,,,");
+      __aws.res('new', function(d) {
+        return console.log('res,,,,,', d);
+      });
+      return __aws.req('new', {
+        foo: 'bar'
+      });
     }
   ]);
   console.log('app,,,,');

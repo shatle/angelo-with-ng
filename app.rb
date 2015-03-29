@@ -11,16 +11,9 @@ class App < Angelo::Base
   get '/' do 
     erb :app
   end
-
-  post '/emit' do 
-    to_ws params
-  end
   
   websocket '/ws' do |s|
     websockets << s
-
-    p "===="
-    p params[:foo], s
 
     # don't do this!
     #
@@ -29,8 +22,9 @@ class App < Angelo::Base
     # instead, do this!
     #
     s.on_message do |msg|
-      p "===msg====", msg, s
-      s.write msg.to_json
+      p "===msg====", msg, JSON.parse(msg) #, s
+      # s.write ({foo: "bar"}).to_json
+      s.write msg
       # 5.times { s.write ({foo: "bar", baz: 123, bat: false}.to_json) }
       # s.write params[:foo].to_json
     end
