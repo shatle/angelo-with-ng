@@ -1,0 +1,42 @@
+GEM
+  remote: http://ruby.taobao.org/
+  specs:
+    angelo (0.4.1)
+      mime-types (~> 2.4)
+      mustermann (~> 0.4)
+      reel (~> 0.5)
+      tilt (~> 2.0)
+    celluloid (0.16.0)
+      timers (~> 4.0.0)
+    celluloid-io (0.16.2)
+      celluloid (>= 0.16.0)
+      nio4r (>= 1.1.0)
+    hitimes (1.2.2)
+    http (0.8.0.pre3)
+      http-form_data (~> 1.0.0)
+      http_parser.rb (~> 0.6.0)
+    http-form_data (1.0.0)
+    http_parser.rb (0.6.0)
+    mime-types (2.4.3)
+    minitest (5.5.1)
+    mustermann (0.4.0)
+      tool (~> 0.2)
+    nio4r (1.1.0)
+    reel (0.5.0)
+      celluloid (>= 0.15.1)
+      celluloid-io (>= 0.15.0)
+      http (>= 0.6.0.pre)
+      http_parser.rb (>= 0.6.0)
+      websocket_parser (>= 0.1.6)
+    tilt (2.0.1)
+    timers (4.0.1)
+      hitimes
+    tool (0.2.3)
+    websocket_parser (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  angelo
+  minitest
