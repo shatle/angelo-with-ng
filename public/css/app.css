@@ -1,0 +1,44 @@
+#containerContent .container {
+  width: 800px;
+  margin: 0 auto;
+}
+#containerContent .ui.visible.left.sidebar ~ .fixed,
+#containerContent .ui.visible.left.sidebar ~ .pusher {
+  -webkit-transform: translate3d(260px, 0, 0);
+  -ms-transform: translate3d(260px, 0, 0);
+  -o-transform: translate3d(260px, 0, 0);
+  transform: translate3d(260px, 0, 0);
+}
+#containerContent .fixed {
+  position: fixed;
+}
+#containerContent .fixed.launch.button {
+  top: 60px;
+  width: 44px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: 0.3s width ease, 0.5s transform ease;
+  -o-transition: 0.3s width ease, 0.5s transform ease;
+  transition: 0.3s width ease, 0.5s transform ease;
+}
+#containerContent .fixed.launch.button .text {
+  display: none;
+}
+#containerContent .fixed.launch.button:hover {
+  width: 110px;
+}
+#containerContent .fixed.launch.button:hover .text {
+  display: inline-block;
+}
+#containerContent .pusher {
+  display: flex;
+  overflow: visible;
+  min-height: 100vh;
+  flex-direction: column;
+}
+#containerContent .pusher .full.height {
+  flex: 1;
+}
+#containerContent #header {
+  min-height: 200px;
+}

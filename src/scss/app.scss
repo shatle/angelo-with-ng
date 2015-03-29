@@ -1,0 +1,43 @@
+#containerContent {
+	.container {
+		width: 800px;
+		margin: 0 auto;
+	}
+
+	.ui.visible.left.sidebar ~ .fixed,
+	.ui.visible.left.sidebar ~ .pusher {
+		-webkit-transform: translate3d(260px, 0, 0);;
+		-ms-transform: translate3d(260px, 0, 0);;
+		-o-transform: translate3d(260px, 0, 0);;
+		transform: translate3d(260px, 0, 0);;
+	}
+
+	.fixed { position: fixed; }
+	.fixed.launch.button {
+		top: 60px;
+		width: 44px;
+		overflow: hidden;
+		white-space: nowrap;
+		-webkit-transition: 0.3s width ease, 0.5s transform ease;
+		-o-transition: 0.3s width ease, 0.5s transform ease;
+		transition: 0.3s width ease, 0.5s transform ease;
+
+		.text { display: none; }
+		
+		&:hover { 
+			width: 110px;
+			.text { display: inline-block; }
+		}
+	} 
+
+	.pusher {
+		display: flex;
+		overflow: visible;
+		min-height: 100vh;
+		flex-direction: column;
+
+		.full.height { flex: 1; }
+	}
+	#header { min-height: 200px; }
+	// #main { min-height: 500px; }
+}

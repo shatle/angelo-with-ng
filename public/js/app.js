@@ -9,7 +9,7 @@ define(['angular', 'angular-couch-potato', 'angular-ui-router', 'aws'], function
         url: '/',
         views: {
           '': {
-            template: '<a ui-sref="app.contacts">contacts</a><div ui-view></div>'
+            templateUrl: 'index.html'
           }
         }
       }).state('app.contacts', {

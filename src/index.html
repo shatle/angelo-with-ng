@@ -1,2 +1,124 @@
-<h3>HHHHH</h3>
-<p>pppppp</p>
+<div id="containerContent" class="pushable dimmable">
+  <!-- ui vertical inverted sidebar menu left uncover visible -->
+  <div id="menu" ng-class="{'uncover': $root.dimmable, 'visible': $root.dimmable}" class="ui vertical inverted sidebar menu left">
+    <div class="item">
+      <div class="ui small  inverted header">Globals</div>
+      <div class="menu">
+        
+          <a class="item" href="/globals/reset.html">
+            Reset
+            
+          </a>
+        
+          <a class="item" href="/globals/site.html">
+            Site
+            
+          </a>
+        
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui small  inverted header">Globals</div>
+      <div class="menu">
+        
+          <a class="item" href="/globals/reset.html">
+            Reset
+            
+          </a>
+        
+          <a class="item" href="/globals/site.html">
+            Site
+            
+          </a>
+        
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="ui small  inverted header">Globals</div>
+      <div class="menu">
+        
+          <a class="item" href="/globals/reset.html">
+            Reset
+            
+          </a>
+        
+          <a class="item" href="/globals/site.html">
+            Site
+            
+          </a>
+        
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui small  inverted header">Globals</div>
+      <div class="menu">
+        
+          <a class="item" href="/globals/reset.html">
+            Reset
+            
+          </a>
+        
+          <a class="item" href="/globals/site.html">
+            Site
+            
+          </a>
+        
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui small  inverted header">Globals</div>
+      <div class="menu">
+        
+          <a class="item" href="/globals/reset.html">
+            Reset
+            
+          </a>
+        
+          <a class="item" href="/globals/site.html">
+            Site
+            
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui black big launch right attached fixed button" ng-click="$root.dimmable = !$root.dimmable">
+    <i class="content icon"></i>
+    <span class="text">Menu</span>
+  </div>
+
+  <div class="ui fixed inverted main menu">
+    <div class="container" ng-click="$root.dimmable = !$root.dimmable">
+      <a class="launch item">
+        <i class="content icon"></i>
+        Menu
+      </a>
+      <div class="title item">
+        <b>Semantic:</b> All UI
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pusher" ng-class="{'dimmed': $root.dimmable}" ng-click="!$root.dimmable || ($root.dimmable=!$root.dimmable)">
+    <div class="full height">
+      <div class="segment" id="header">
+        <div class="container">
+          <h1>HHHHH</h1>
+          <p>ppppppppp</p>
+        </div>
+      </div>
+
+      <div class="segment" id="main">
+        <div class="container">
+          <a ui-sref="app.contacts">contacts</a>
+          <div ui-view></div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
