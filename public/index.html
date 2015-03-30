@@ -108,7 +108,7 @@
       <div class="segment ui" id="header">
         <div class="container">
           <div ng-if="$state.current.name!='app'" ui-view="header"></div>
-          <div ng-if="$state.current.name='app'">
+          <div ng-if="$state.current.name=='app'">
             <h1>Semantic UI</h1>
             <div class="ui buttons">
               <div class="ui button">Login</div>
@@ -122,8 +122,9 @@
       <div class="segment" id="main">
         <div class="container">
           <div ng-if="$state.current.name!='app'" ui-view></div>
-          <div ng-if="$state.current.name='app'">
+          <div ng-if="$state.current.name=='app'">
             <p>Content....</p>
+            <a ui-sref="app.contacts">contacts</a>
           </div>
         </div>
         
