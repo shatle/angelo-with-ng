@@ -35,11 +35,23 @@
   overflow: visible;
   min-height: 100vh;
   flex-direction: column;
+  background-color: #EFEFEF;
 }
 #containerContent .pusher .full.height {
   flex: 1;
 }
 #containerContent #header {
-  min-height: 200px;
+  min-height: 150px;
   padding-top: 40px;
+  margin-bottom: 0px;
+  background-color: #FFF;
+}
+#containerContent #header .container {
+  padding: 15px;
+}
+#containerContent #main .container {
+  background-color: #FFF;
+  padding: 15px;
+  min-height: 300px;
+  border: 1px solid #DFDFDF;
 }

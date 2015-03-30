@@ -94,7 +94,7 @@ gulp.task 'watch', ()->
 gulp.task 'server', ->
   connect.server({
     root: ['public'],
-    port: '4567',
+    port: '8888',
     livereload: true
   });
 
