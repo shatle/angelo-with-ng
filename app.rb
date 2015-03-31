@@ -1,6 +1,16 @@
 $:.unshift '', __FILE__
 
+APP_ENV ||= { mode: :development }
+
 require 'angelo'
+require 'mongoid'
+require 'protected_attributes'
+
+# load mongodb with mongoid
+@con = Mongoid.load!("mongoid.yml", APP_ENV&&APP_ENV[:mode].nil? ? :development : APP_ENV[:mode] )
+
+# require model
+Dir[File.dirname(__FILE__) + '/model/*.rb'].each {|file| require file }
 
 class App < Angelo::Base
 
@@ -31,4 +41,4 @@ class App < Angelo::Base
   end
 end
 
-App.run!
+App.run! unless APP_ENV&&APP_ENV[:mode]==:test

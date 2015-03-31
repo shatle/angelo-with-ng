@@ -31,7 +31,6 @@ define([], function() {
     AWS.prototype.__message = function() {
       return this.ws.onmessage = (function(_this) {
         return function(d) {
-          console.log("onmessage,,,,", d);
           d = JSON.parse(d.data);
           if (d.req_name && _this.response[d.req_name]) {
             return _this.response[d.req_name](d.data);
@@ -73,7 +72,6 @@ define([], function() {
     };
 
     AWS.prototype.res = function(name, cb) {
-      console.log("response,,,,,", this.response);
       if (name && cb) {
         return this.__registerResponse(name, cb);
       }

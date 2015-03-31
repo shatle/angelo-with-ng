@@ -21,7 +21,7 @@ define [], ()->
 
     __message: ()->
       @ws.onmessage = (d)=>
-        console.log "onmessage,,,,", d
+        # console.log "onmessage,,,,", d
          
         d = JSON.parse(d.data)
         @response[d.req_name](d.data) if d.req_name && @response[d.req_name]
@@ -49,7 +49,7 @@ define [], ()->
     # public
 
     res: (name, cb)->
-      console.log "response,,,,,", @response
+      # console.log "response,,,,,", @response
       @__registerResponse(name, cb) if name && cb
 
     req: (name, query)->
