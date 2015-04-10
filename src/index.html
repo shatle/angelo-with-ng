@@ -139,11 +139,51 @@
       signupModal
     </div>
     <div class="content">
-      <div class="left">
-        <i class="home icon"></i>
-      </div>
-      <div class="right">
-        <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+      <div class="ui segment signup">
+        <div class="ui page two column middle aligned relaxed fitted stackable grid">
+          <div class="column">
+            <div class="ui form segment">
+              <div class="field">
+                <label>Username</label>
+                <div class="ui left icon input">
+                  <input ng-model="data.username" required type="text" placeholder="Username">
+                  <i class="user icon"></i>
+                </div>
+              </div>
+              <div class="field">
+                <label>Email</label>
+                <div class="ui left icon input">
+                  <input ng-model="data.email" required type="text" placeholder="Email">
+                  <i class="mail icon"></i>
+                </div>
+              </div>
+              <div class="field">
+                <label>Password</label>
+                <div class="ui left icon input">
+                  <input ng-model="data.password" type="password">
+                  <i class="unlock alternate icon"></i>
+                </div>
+              </div>
+              <div class="field">
+                <label>Confirm Password</label>
+                <div class="ui left icon input">
+                  <input ng-model="data.confirm_password" type="password">
+                  <i class="lock icon"></i>
+                </div>
+              </div>
+              <button class="ui blue submit button" ng-click="signup()">Sign Up</button>
+            </div>
+          </div>
+          <div class="ui vertical divider">
+            Or
+          </div>
+          <div class="center aligned column">
+            <a ui-sref="app.login"  class="huge green ui labeled icon button">
+              <i class="sign in icon"></i>
+              Sign In
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="actions">
@@ -166,12 +206,52 @@
       loginModal
     </div>
     <div class="content">
-      <div class="left">
-        <i class="home icon"></i>
-      </div>
-      <div class="right">
-        <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
-      </div>
+
+        <div class="ui page two column middle aligned relaxed fitted stackable grid">
+          <div class="column">
+            <div class="ui form segment">
+              <div class="field">
+                <label>Username</label>
+                <div class="ui left icon input">
+                  <input ng-model="data.username" required type="text" placeholder="Username">
+                  <i class="user icon"></i>
+                </div>
+              </div>
+              <div class="field">
+                <label>Email</label>
+                <div class="ui left icon input">
+                  <input ng-model="data.email" required type="text" placeholder="Email">
+                  <i class="mail icon"></i>
+                </div>
+              </div>
+              <div class="field">
+                <label>Password</label>
+                <div class="ui left icon input">
+                  <input ng-model="data.password" type="password">
+                  <i class="unlock alternate icon"></i>
+                </div>
+              </div>
+              <div class="field">
+                <label>Confirm Password</label>
+                <div class="ui left icon input">
+                  <input ng-model="data.confirm_password" type="password">
+                  <i class="lock icon"></i>
+                </div>
+              </div>
+              <button class="ui blue submit button" ng-click="signup()">Sign Up</button>
+            </div>
+          </div>
+          <div class="ui vertical divider">
+            Or
+          </div>
+          <div class="center aligned column">
+            <a ui-sref="app.login"  class="huge green ui labeled icon button">
+              <i class="sign in icon"></i>
+              Sign In
+            </a>
+          </div>
+        </div>
+
     </div>
     <div class="actions">
       <div class="two fluid ui buttons">
