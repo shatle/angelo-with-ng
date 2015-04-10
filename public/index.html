@@ -111,9 +111,9 @@
           <div ng-if="$state.current.name=='app'">
             <h1>Semantic UI</h1>
             <div class="ui buttons">
-              <div class="ui button">Login</div>
+              <div ng-click="$root.openLoginModal()" class="ui button">Login</div>
               <div class="or"></div>
-              <div class="ui positive button">SignIn</div>
+              <div ng-click="$root.openSignupModal()"  class="ui positive button">Signup</div>
             </div>
           </div>
         </div>
@@ -132,3 +132,57 @@
     </div>
   </div>
 </div>
+
+<modal ng-model="$root.signupModal">
+    <i class="close icon" ng-click="$root.signupModal = false"></i>
+    <div class="header">
+      signupModal
+    </div>
+    <div class="content">
+      <div class="left">
+        <i class="home icon"></i>
+      </div>
+      <div class="right">
+        <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="two fluid ui buttons">
+        <div class="ui negative labeled icon button">
+          <i class="remove icon"></i>
+            No
+        </div>
+        <div class="ui positive right labeled icon button">
+          Yes
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    </div>
+</modal>
+
+<modal ng-model="$root.loginModal" ng-controller="authCtrl">
+    <i class="close icon" ng-click="$root.loginModal = false"></i>
+    <div class="header">
+      loginModal
+    </div>
+    <div class="content">
+      <div class="left">
+        <i class="home icon"></i>
+      </div>
+      <div class="right">
+        <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="two fluid ui buttons">
+        <div class="ui negative labeled icon button">
+          <i class="remove icon"></i>
+            No
+        </div>
+        <div class="ui positive right labeled icon button">
+          Yes
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    </div>
+</modal>

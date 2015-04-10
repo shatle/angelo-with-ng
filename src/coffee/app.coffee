@@ -1,8 +1,8 @@
 define ['angular',
-  'angular-couch-potato', 'angular-ui-router', 'aws'
+  'angular-couch-potato', 'angular-ui-router', 'aws', 'angular-ui-semantic'
   ], (angular, couchPotato,router, AWS)->
 
-    app = angular.module('app', ['scs.couch-potato', 'ui.router'])
+    app = angular.module('app', ['scs.couch-potato', 'ui.router', 'angularify.semantic'])
     couchPotato.configureApp(app);
 
     # Config router
@@ -14,9 +14,9 @@ define ['angular',
           .state('app', {
               url: '/',
               # template: '<a ui-sref="app.contacts">contacts</a><div ui-view></div>',
-              # resolve: {
-              #   dummy: $couchPotatoProvider.resolveDependencies(['mainnavDirective'])
-              # },
+              resolve: {
+                dummy: $couchPotatoProvider.resolveDependencies(['authCtrl'])
+              },
               views: {
                 '': { templateUrl: 'index.html' },
                 # 'mainnav': {
@@ -60,6 +60,23 @@ define ['angular',
           console.log 'res,,,,,', d 
 
         __aws.req 'new', {foo: 'bar'}
+
+
+        $rootScope.openSignupModal = ()->
+          $rootScope.signupModal = true
+          console.log 'openSignupModal', $rootScope.signupModal
+
+        $rootScope.closeSignupModal = ()->
+          $rootScope.signupModal = false
+          console.log 'closeSignupModal', $rootScope.signupModal
+
+        $rootScope.openLoginModal = ()->
+          $rootScope.loginModal = true
+          console.log 'openLoginModal', $rootScope.loginModal
+
+        $rootScope.closeLoginModal = ()->
+          $rootScope.loginModal = false
+          console.log 'closeLoginModal', $rootScope.loginModal
     ]
 
     console.log 'app,,,,'
