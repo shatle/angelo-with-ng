@@ -4,7 +4,7 @@ APP_ENV ||= { mode: :development }
 
 require 'angelo'
 require 'mongoid'
-require 'protected_attributes'
+# require 'protected_attributes'
 
 # load mongodb with mongoid
 @con = Mongoid.load!("mongoid.yml", APP_ENV&&APP_ENV[:mode].nil? ? :development : APP_ENV[:mode] )

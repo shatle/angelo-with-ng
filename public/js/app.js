@@ -26,14 +26,6 @@ define(['angular', 'angular-couch-potato', 'angular-ui-router', 'aws', 'angular-
       app.lazy = $couchPotato;
       $rootScope.$state = $state;
       $rootScope.$stateParams = $stateParams;
-      window.__aws = new AWS('127.0.0.1:4567/ws');
-      console.log("__aws, new,,,,,");
-      __aws.res('new', function(d) {
-        return console.log('res,,,,,', d);
-      });
-      __aws.req('new', {
-        foo: 'bar'
-      });
       $rootScope.openSignupModal = function() {
         $rootScope.signupModal = true;
         return console.log('openSignupModal', $rootScope.signupModal);
