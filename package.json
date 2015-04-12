@@ -19,5 +19,8 @@
     "gulp-util": "",
     "rimraf": "",
     "yargs": ""
+  },
+  "devDependencies": {
+    "gulp-ruby-sass": "^1.0.1"
   }
 }

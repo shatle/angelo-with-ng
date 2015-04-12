@@ -15,7 +15,7 @@ define ['angular',
               url: '/',
               # template: '<a ui-sref="app.contacts">contacts</a><div ui-view></div>',
               resolve: {
-                dummy: $couchPotatoProvider.resolveDependencies(['authCtrl'])
+                dummy: $couchPotatoProvider.resolveDependencies(['authCtrl', 'appDrts'])
               },
               views: {
                 '': { templateUrl: 'index.html' },

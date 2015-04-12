@@ -8,7 +8,7 @@ define(['angular', 'angular-couch-potato', 'angular-ui-router', 'aws', 'angular-
       return $stateProvider.state('app', {
         url: '/',
         resolve: {
-          dummy: $couchPotatoProvider.resolveDependencies(['authCtrl'])
+          dummy: $couchPotatoProvider.resolveDependencies(['authCtrl', 'appDrts'])
         },
         views: {
           '': {
